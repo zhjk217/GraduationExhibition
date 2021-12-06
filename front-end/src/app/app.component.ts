@@ -8,29 +8,20 @@ declare let $:any; // 當然 let 也可以
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-  image = "assets/img/portfolio/1.jpg";
-  Imageout = false;
-  ImageNumber = 0;
-  ChangeImage() {
-    this.Imageout = true;
-    var st = setInterval(() => {
-      if (!this.Imageout) {
-        clearInterval(st);
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll($event:any) {
+    this.navbarShrink();
+  }
+  navbarShrink(){
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    if (!navbarCollapsible) {
         return;
-      }
-      this.RollImage();
-    }, 1000);
-  }
-  RollImage(){
-    let rollNumber = Math.floor(Math.random() * 6 + 1);
-    if(rollNumber == this.ImageNumber){
-      this.RollImage();
-      return;
     }
-    this.image = "assets/img/portfolio/" + rollNumber + ".jpg";
-  }
-  OutImage() {
-    this.Imageout = false;
-    $
-  }
+    if (window.scrollY === 0) {
+        navbarCollapsible.classList.remove('navbar-shrink');console.log("a");
+    } else {
+        navbarCollapsible.classList.add('navbar-shrink')
+    }
+
+};
 }
