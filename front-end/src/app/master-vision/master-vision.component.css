@@ -1,7 +1,7 @@
 #mainNav .navbar-brand img {
     height: 1.5rem;
   }
-  
+    
   header.masthead {
     padding-top: 10.5rem;
     padding-bottom: 6rem;
@@ -76,6 +76,7 @@
   }
   .page-section {
     padding: 6rem 0;
+    padding-bottom:0px;
   }
   .page-section h2.section-heading,
   .page-section .section-heading.h2 {
@@ -202,7 +203,83 @@
   .slider_container {
     position: relative;
   }
+  header{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+  }
+    
+  .ooo{
+    margin-top:10px;
+    padding-bottom:0px;    
+      
+    position: fixed;
+    top: 80%;
+    left: 80%;
+    min-width: 200%;
+    min-height: 200%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background:radial-gradient(circle at 50% 50%,
+    rgba(255, 3, 3, 0.4)  1%, 
+    transparent 75%);
+    z-index:-100;
+  }
   
+  .aaa{
+    margin-top:10px;
+    padding-bottom:0px;    
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    min-width: 200%;
+    min-height: 200%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background:radial-gradient(circle at 50% 50%,
+    rgba(45, 0, 248, 0.4)  1%, 
+    transparent 75%);
+    z-index:-8;
+  }
+  section{
+    margin-top:10px;
+    padding-bottom:0px;    
+      
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  header div{
+    animation: sround 1s;
+  }
+  section div{
+    animation: sround 1s;
+  }
+  @keyframes sround {
+    0% {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      /* 0 - 1秒 淡入*/
+    }
+    100% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      /* 5-6秒淡出*/
+    }
+  }
   .slider_container div {
     position: absolute;
     top: 0;
@@ -318,7 +395,10 @@
     margin-top: 1.5rem;
     margin-bottom: 0;
   }
-  
+  .nav-link{
+    font-weight: 400;
+    font-family:SimHei;
+  }
   .contact {
     margin-bottom: 3rem;
     text-align: center;
@@ -326,10 +406,9 @@
   .contact img {
     width: 10rem;
     height: 10rem;
-  }  #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color:#B6E0F5;
+  }  
+  .navbar-shrink {
+    background-color:rgb(54, 50, 50);
   }
   header.map {
     padding-top: 10.5rem;
@@ -395,4 +474,4 @@
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     color: #ced4da;
-  }
+  }.mouseon:hover{background:linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.15));}

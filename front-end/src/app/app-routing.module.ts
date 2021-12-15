@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { MasterVisionComponent } from './master-vision/master-vision.component';
+//路由控制
 const routes: Routes = [{
 
   path: '',
